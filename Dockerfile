@@ -17,7 +17,8 @@ ENV KC_DB_URL=<DBURL>
 ENV KC_DB_USERNAME=<DBUSERNAME>
 ENV KC_DB_PASSWORD=<DBPASSWORD>
 ENV KC_HOSTNAME=localhost
+ENV PORT=8080
 
 EXPOSE 8080
 
-ENTRYPOINT ["/opt/keycloak/bin/kc.sh", "start", "--http-port=${PORT}", "--hostname-strict=false", "--http-enabled=true", "--http-host=0.0.0.0"]
+ENTRYPOINT ["/opt/keycloak/bin/kc.sh", "start-dev", "--http-port=${PORT}", "--hostname-strict=false", "--http-enabled=true", "--http-host=0.0.0.0"]
