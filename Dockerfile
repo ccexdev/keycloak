@@ -20,4 +20,4 @@ ENV KC_HOSTNAME=localhost
 
 EXPOSE 8080
 
-ENTRYPOINT ["/opt/keycloak/bin/kc.sh", "start-dev", "--http-port=${PORT}", "--hostname-strict=false", "--http-enabled=true", "--http-host=0.0.0.0"]
+ENTRYPOINT ["/opt/keycloak/bin/kc.sh", "start-dev", "--http-port=${PORT:-10000}", "--hostname-strict=false", "--http-enabled=true", "--http-host=0.0.0.0"]
